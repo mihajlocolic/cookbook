@@ -1,0 +1,46 @@
+{
+  "cookbook": [
+    {
+      "id": 1,
+      "name": "Garlic Butter Shrimp Pasta",
+      "description": "Indulge in a taste of the Mediterranean with our Garlic Butter Shrimp Pasta. Succulent shrimp are sautéed to perfection in a rich garlic butter sauce, then tossed with al dente linguine for a savory, mouthwatering dish that's ready in under 30 minutes. A sprinkle of fresh parsley and a hint of lemon zest add a burst of freshness to every bite, making this a must-try recipe for seafood and pasta lovers alike."
+    },
+    {
+      "id": 2,
+      "name": "Caprese Salad with Balsamic Glaze",
+      "description": "Elevate your salad game with our Caprese Salad. Ripe tomatoes, creamy mozzarella, and fresh basil are drizzled with a luscious balsamic glaze, creating a simple yet irresistible appetizer that's a burst of Italian flavors."
+    },
+    {
+      "id": 3,
+      "name": "Grilled Chicken Fajitas",
+      "description": "Get ready for a fiesta on your plate with Grilled Chicken Fajitas. Juicy marinated chicken, colorful bell peppers, and onions are charred to perfection, then wrapped in warm tortillas for a sizzling Tex-Mex delight."
+    },
+    {
+      "id": 4,
+      "name": "Classic Beef Stroganoff",
+      "description": "Cozy up to a hearty Classic Beef Stroganoff. Tender strips of beef are simmered in a creamy mushroom sauce, served over egg noodles, and garnished with a sprinkle of fresh parsley—a timeless comfort food that's quick to prepare."
+    },
+    {
+      "id": 5,
+      "name": "Mango Salsa with Grilled Shrimp",
+      "description": "Taste the tropics with our Mango Salsa and Grilled Shrimp. Succulent, smoky shrimp pair perfectly with a vibrant mango salsa, offering a sweet and savory dish that's a vacation for your taste buds."
+    },
+    {
+      "id": 6,
+      "name": "Vegetable Stir-Fry with Tofu",
+      "description": "For a healthy and flavorful meal, try our Vegetable Stir-Fry with Tofu. Colorful veggies and tofu are wok-tossed in a savory ginger-soy sauce, creating a quick and nutritious dish that's both satisfying and satisfyingly easy."
+    },
+    {
+      "name": "Sarma",
+      "description": "Sarma is a traditional Serbian dish introduced during the Ottoman oppression. It's a cabbage roll filled with minced meat and rice.",
+      "ingridients": "Cabbage, minced meat and rice.",
+      "id": 7
+    },
+    {
+      "name": "Popara",
+      "description": "Popara is a traditional Serbian dish made with water and bread. You can add onions, pavlaka or something else that's to your liking.",
+      "ingridients": "Water, oil, bread.",
+      "id": 8
+    }
+  ]
+}

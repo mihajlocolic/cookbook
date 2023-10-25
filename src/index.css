@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+* { 
+  font-family: 'Quicksand';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #dedede;
+  color: #030303;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.navbar-brand {
+  display: flex;
+  gap: 5px;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;  
+  align-items: center;
+}
+.links a {
+  text-decoration: none;
+  color:#030303;
+  font-size: 18px;
+}
+.links a:hover {
+  color:#34932b;
+}
+
+.btn-primary {
+  background-color: #34932b;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #287221;
+}
+.btn-primary:active {
+  background-color: #34932b !important;
+}
+
+.search-field {
+  border: 1px solid #d2d2d2;
+  border-radius: 10px 0 0 10px;
+  padding: 8px;
+}
+
+.search-field:focus {
+  border: 2px solid green;
+}
+
+.home h3 {
+  font-size: 2rem;
+  margin: 1rem 2rem;
+  color: #34932b;
+}
+.error-message, .loading-message {
+  text-align: center;
+  font-size: 2em;
+}
+.error-message {
+  background-color: rgb(255, 72, 72);
+  outline: 2px solid rgb(195, 42, 42);
+}
+
+.recipe-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin: 1em 2rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  user-select: none;
+}
+
+.card h4 {
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card:active {
+  background-color: #999999;
+}
+
+.scrollToTop:hover {
+  opacity: 80%;
+}
+
+.scrollToTop {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 10px;
+  right: 40px;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 10rem;
+}
+
+.recipe-details h2, h5 {
+  color: #34932b;
+}
+
+
+.addRecipeForm {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+}
+
+.addRecipeForm textarea, .addRecipeForm input {
+  width: 100%;
+  margin: 1rem 0;
+  border: 2px solid #999999;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
