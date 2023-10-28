@@ -1,6 +1,11 @@
 import {Link} from 'react-router-dom';
 
 function Navbar() {
+    const handleSearch = () => {
+
+    }
+
+
     return (
         <div className="navbar">
             <div className="navbar-brand">

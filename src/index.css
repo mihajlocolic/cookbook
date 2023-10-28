@@ -105,6 +105,10 @@ body {
   background-color: #999999;
 }
 
+.card-img-top {
+  max-height: 300px;
+}
+
 .scrollToTop:hover {
   opacity: 80%;
 }
@@ -127,8 +131,13 @@ body {
 
 .recipe-details h2, h5 {
   color: #34932b;
+  margin: 2rem 0;
 }
 
+.recipe-details img {
+  max-height: 600px;
+  border-radius: 15px;
+}
 
 .addRecipeForm {
   max-width: 50rem;

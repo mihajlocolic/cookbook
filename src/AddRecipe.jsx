@@ -5,18 +5,20 @@ import ScrollTop from "./ScrollTop";
 const AddRecipe = () => {
     const [name, setDishName] = useState('');
     const [description, setDishDescription] = useState('');
-    const [ingridients, setIngridients] = useState('');
+    const [ingredients, setIngredients] = useState('');
+    const [preparation, setPreparation] = useState('');
+    const [image, setImage] = useState('')
     const {showButton, handleScrollToTop} = ScrollTop();
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const dish = {name, description, ingridients};
+        const dish = {name, description, ingredients, preparation, image};
 
         setIsPending(true);
 
-        fetch('http://localhost:8000/cookbook/',{
+        fetch('http://localhost:8000/recipes/',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(dish)
@@ -40,18 +42,29 @@ const AddRecipe = () => {
                     required
                 ></input>
                 <label>Short description:</label>
-                <input 
-                    name="dishDescription" 
-                    type="text" 
+                <textarea 
+                    name="dishDescription"  
                     value={description}
                     onChange={(e) => setDishDescription(e.target.value)}   
-                ></input>
-                <label>Ingridients:</label>
+                ></textarea>
+                <label>Ingredients:</label>
                 <textarea 
                     name="ingridients" 
-                    value={ingridients}
-                    onChange={(e) => setIngridients(e.target.value)}
+                    value={ingredients}
+                    onChange={(e) => setIngredients(e.target.value)}
                 ></textarea>
+                <label>Preparation:</label>
+                <textarea 
+                    name="preparation" 
+                    value={preparation}
+                    onChange={(e) => setPreparation(e.target.value)}
+                ></textarea>
+                <label>Image URL:</label>
+                <input
+                type="text"
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+                />
                 {! isPending && <button className="btn btn-primary">Add Dish</button>}
                 {isPending && <button className="btn btn-primary">Adding dish..</button>}
             </form>

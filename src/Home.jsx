@@ -1,10 +1,10 @@
 
-import RecentRecipes from "./Recipes";
+import Recipes from "./Recipes";
 import UseFetch from "./UseFetch";
 import ScrollTop from "./ScrollTop";
 
 function Home() {
-    const {data:recipes, error, isPending} = UseFetch('http://localhost:8000/cookbook')
+    const {data:recipes, error, isPending} = UseFetch('http://localhost:8000/recipes')
     const {showButton, handleScrollToTop} = ScrollTop()
 
     return(
@@ -12,7 +12,7 @@ function Home() {
             <h3>Recipes</h3>
             { error && <div className="error-message">{error}</div> }
             { isPending && <div className="loading-message">Loading delicious recipes...</div> }
-            { recipes && <RecentRecipes recipes={recipes}></RecentRecipes>}
+            { recipes && <Recipes recipes={recipes}></Recipes>}
             { showButton && <img className='scrollToTop' src="/backToTop.svg" onClick={handleScrollToTop}></img>}
         </div>
     )

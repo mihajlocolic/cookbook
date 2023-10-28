@@ -1,46 +1,84 @@
 {
-  "cookbook": [
+  "recipes": [
     {
       "id": 1,
-      "name": "Garlic Butter Shrimp Pasta",
-      "description": "Indulge in a taste of the Mediterranean with our Garlic Butter Shrimp Pasta. Succulent shrimp are sautéed to perfection in a rich garlic butter sauce, then tossed with al dente linguine for a savory, mouthwatering dish that's ready in under 30 minutes. A sprinkle of fresh parsley and a hint of lemon zest add a burst of freshness to every bite, making this a must-try recipe for seafood and pasta lovers alike."
+      "name": "Spaghetti Carbonara",
+      "description": "A classic Italian pasta dish with creamy sauce and crispy pancetta.",
+      "ingredients": [
+        "8 ounces spaghetti",
+        "2 large eggs",
+        "1 cup grated Pecorino Romano cheese",
+        "4 ounces pancetta, diced",
+        "2 cloves garlic, minced",
+        "Salt and black pepper to taste",
+        "Fresh parsley for garnish"
+      ],
+      "preparation": "1. Cook the spaghetti according to package instructions until al dente. Reserve 1/2 cup of pasta cooking water.\n2. In a separate pan, sauté the pancetta until it's crispy. Add minced garlic and cook for another minute.\n3. In a bowl, whisk together eggs, grated Pecorino Romano cheese, and a bit of black pepper.\n4. Drain the cooked spaghetti and add it to the pan with pancetta and garlic. Toss to combine.\n5. Remove from heat and quickly stir in the egg and cheese mixture. Use reserved pasta water to achieve a creamy consistency.\n6. Serve with additional grated cheese and chopped fresh parsley.",
+      "image": "https://www.culinaryhill.com/wp-content/uploads/2021/12/Spaghetti-Carbonara-Culinary-Hill-1200x800-1-480x270.jpg"
     },
     {
       "id": 2,
-      "name": "Caprese Salad with Balsamic Glaze",
-      "description": "Elevate your salad game with our Caprese Salad. Ripe tomatoes, creamy mozzarella, and fresh basil are drizzled with a luscious balsamic glaze, creating a simple yet irresistible appetizer that's a burst of Italian flavors."
+      "name": "Chicken Fajitas",
+      "description": "A Tex-Mex favorite featuring seasoned chicken and colorful peppers.",
+      "ingredients": [
+        "1 pound boneless, skinless chicken breasts, sliced into strips",
+        "2 bell peppers, thinly sliced",
+        "1 onion, thinly sliced",
+        "2 tablespoons fajita seasoning",
+        "2 tablespoons vegetable oil",
+        "Flour tortillas",
+        "Sour cream, salsa, and guacamole for serving"
+      ],
+      "preparation": "1. In a large bowl, combine the chicken strips, sliced bell peppers, and sliced onions.\n2. Toss the mixture with fajita seasoning and vegetable oil until well coated.\n3. Heat a skillet over medium-high heat and add the chicken and vegetable mixture.\n4. Sauté until the chicken is cooked through and the vegetables are tender.\n5. Warm the flour tortillas in the skillet or microwave.\n6. Serve the chicken and vegetable mixture in the tortillas with sour cream, salsa, and guacamole.",
+      "image": "https://www.simplyrecipes.com/thmb/Igb2OthIr1Onu0tCPyNVMp8EmtI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2015__04__chicken-fajitas-horiz-a2-1800-8ca8b1b6a694468b8bccf5a1d8e07c6d.jpg"
     },
     {
       "id": 3,
-      "name": "Grilled Chicken Fajitas",
-      "description": "Get ready for a fiesta on your plate with Grilled Chicken Fajitas. Juicy marinated chicken, colorful bell peppers, and onions are charred to perfection, then wrapped in warm tortillas for a sizzling Tex-Mex delight."
+      "name": "Caprese Salad",
+      "description": "A simple and refreshing Italian salad with tomatoes, mozzarella, and basil.",
+      "ingredients": [
+        "4 ripe tomatoes, sliced",
+        "8 ounces fresh mozzarella cheese, sliced",
+        "Fresh basil leaves",
+        "Extra-virgin olive oil",
+        "Balsamic vinegar",
+        "Salt and pepper to taste"
+      ],
+      "preparation": "1. Arrange the tomato and mozzarella slices on a serving platter, alternating and slightly overlapping.\n2. Tuck fresh basil leaves between the tomato and mozzarella slices.\n3. Drizzle extra-virgin olive oil and balsamic vinegar over the salad.\n4. Season with salt and pepper to taste.\n5. Serve immediately as a refreshing appetizer or side dish.",
+      "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg"
     },
     {
       "id": 4,
-      "name": "Classic Beef Stroganoff",
-      "description": "Cozy up to a hearty Classic Beef Stroganoff. Tender strips of beef are simmered in a creamy mushroom sauce, served over egg noodles, and garnished with a sprinkle of fresh parsley—a timeless comfort food that's quick to prepare."
+      "name": "Beef Stir-Fry",
+      "description": "A quick and flavorful stir-fry with tender beef and crisp vegetables.",
+      "ingredients": [
+        "1 pound beef sirloin, thinly sliced",
+        "2 cups mixed vegetables (e.g., broccoli, bell peppers, snap peas)",
+        "3 cloves garlic, minced",
+        "1/4 cup soy sauce",
+        "2 tablespoons hoisin sauce",
+        "2 tablespoons vegetable oil",
+        "Cooked rice for serving"
+      ],
+      "preparation": "1. In a bowl, marinate the sliced beef with minced garlic, soy sauce, and hoisin sauce for 15 minutes.\n2. Heat vegetable oil in a wok or large skillet over high heat.\n3. Add the marinated beef and stir-fry until it's browned and cooked through. Remove from the pan and set aside.\n4. In the same pan, stir-fry the mixed vegetables until crisp-tender.\n5. Return the cooked beef to the pan and stir to combine with the vegetables.\n6. Serve the beef stir-fry over cooked rice.",
+      "image": "https://www.foodnetwork.com/content/dam/images/food/fullset/2015/12/16/3/FNM_010116-Beef-Stir-Fry-Recipe_s4x3.jpg"
     },
     {
       "id": 5,
-      "name": "Mango Salsa with Grilled Shrimp",
-      "description": "Taste the tropics with our Mango Salsa and Grilled Shrimp. Succulent, smoky shrimp pair perfectly with a vibrant mango salsa, offering a sweet and savory dish that's a vacation for your taste buds."
-    },
-    {
-      "id": 6,
-      "name": "Vegetable Stir-Fry with Tofu",
-      "description": "For a healthy and flavorful meal, try our Vegetable Stir-Fry with Tofu. Colorful veggies and tofu are wok-tossed in a savory ginger-soy sauce, creating a quick and nutritious dish that's both satisfying and satisfyingly easy."
-    },
-    {
-      "name": "Sarma",
-      "description": "Sarma is a traditional Serbian dish introduced during the Ottoman oppression. It's a cabbage roll filled with minced meat and rice.",
-      "ingridients": "Cabbage, minced meat and rice.",
-      "id": 7
-    },
-    {
-      "name": "Popara",
-      "description": "Popara is a traditional Serbian dish made with water and bread. You can add onions, pavlaka or something else that's to your liking.",
-      "ingridients": "Water, oil, bread.",
-      "id": 8
+      "name": "Vegetable Curry",
+      "description": "A fragrant and spicy vegetarian curry with a variety of vegetables.",
+      "ingredients": [
+        "2 cups mixed vegetables (e.g., carrots, potatoes, bell peppers, peas), ",
+        "1 onion, chopped, ",
+        "2 cloves garlic, minced, ",
+        "1 can (14 oz) coconut milk, ",
+        "2 tablespoons curry paste, ",
+        "1 tablespoon vegetable oil, ",
+        "Fresh cilantro for garnish, ",
+        "Cooked rice or naan bread for serving, "
+      ],
+      "preparation": "1. Heat vegetable oil in a large pot over medium heat. Add chopped onion and sauté until translucent.\n2. Add minced garlic and curry paste. Cook for a couple of minutes until fragrant.\n3. Add the mixed vegetables and sauté for a few minutes.\n4. Pour in the coconut milk and simmer until the vegetables are tender and the sauce thickens.\n5. Serve the vegetable curry over cooked rice or with naan bread, garnished with fresh cilantro.",
+      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/07/vegetable-curry-recipe.jpg"
     }
   ]
 }
