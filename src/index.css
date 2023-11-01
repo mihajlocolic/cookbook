@@ -20,6 +20,8 @@ body {
   display: flex;
   gap: 5px;
 }
+
+
 .links {
   display: flex;
   flex-direction: row;
@@ -46,15 +48,7 @@ body {
   background-color: #34932b !important;
 }
 
-.search-field {
-  border: 1px solid #d2d2d2;
-  border-radius: 10px 0 0 10px;
-  padding: 8px;
-}
 
-.search-field:focus {
-  border: 2px solid green;
-}
 
 .home h3 {
   font-size: 2rem;
@@ -68,6 +62,21 @@ body {
 .error-message {
   background-color: rgb(255, 72, 72);
   outline: 2px solid rgb(195, 42, 42);
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar input {
+  border: none;
+  padding: 0.5rem;
+  width: 300px;
+  border-radius: 10px;
+}
+.search-bar input[type=text]:focus {
+  outline: 2px solid #cdcdcd;
 }
 
 .recipe-list {

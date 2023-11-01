@@ -1,12 +1,12 @@
-import Home from './Home';
+import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Navbar';
-import Recipe from './Recipe';
-import AddRecipe from './AddRecipe';
-import NotFound from './NotFound';
+import Navbar from './components/Navbar';
+import Recipe from './components/Recipe';
+import AddRecipe from './components/AddRecipe';
+import NotFound from './components/NotFound';
 
 function App() {
-  
+
   return (
     <Router>
       <div className="app">
@@ -19,7 +19,7 @@ function App() {
       </Routes>
     </div>
     </Router>
-  )
-};
+  );
+}
 
 export default App;

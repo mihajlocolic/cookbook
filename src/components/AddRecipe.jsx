@@ -7,7 +7,7 @@ const AddRecipe = () => {
     const [description, setDishDescription] = useState('');
     const [ingredients, setIngredients] = useState('');
     const [preparation, setPreparation] = useState('');
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState('');
     const {showButton, handleScrollToTop} = ScrollTop();
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ const AddRecipe = () => {
             console.log("New dish added");
             setIsPending(false);
             navigate('/')
-        })
+        });
     }
 
 
