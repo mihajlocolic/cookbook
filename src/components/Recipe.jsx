@@ -4,12 +4,12 @@ import ScrollTop from "./ScrollTop";
 
 const Recipe = () => {
     const {id} = useParams()
-    const { data:recipe, error, isPending } = UseFetch('http://localhost:8000/recipes/' + id)
+    const { data:recipe, error, isPending } = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes/' + id)
     const {showButton, handleScrollToTop} = ScrollTop
     const navigate = useNavigate()
 
     const handleDelete = () => {
-        fetch('http://localhost:8000/recipes/' + id, {
+        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes/' + id, {
             method: 'DELETE'
         })
         .then(response => response.text())

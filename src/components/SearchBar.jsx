@@ -6,7 +6,7 @@ const SearchBar = ({setSearchResults}) => {
     
     
     const fetchData = (value) => {
-        fetch('http://localhost:8000/recipes')
+        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes')
         .then((response) => response.json())
         .then((json) => {
             const results = json.filter((recipe) => {
