@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const EditRecipe = () => {
     const {id} = useParams();
-    const { data:recipe, error } = UseFetch('http://localhost:8000/recipes/' + id);
+    const { data:recipe, error } = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes' + id);
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
     
@@ -22,7 +22,7 @@ const EditRecipe = () => {
 
         const tempRecipe = {name, description, ingredients, preparation, image};
 
-        fetch('http://localhost:8000/recipes/' + id, {
+        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes' + id, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(tempRecipe)
