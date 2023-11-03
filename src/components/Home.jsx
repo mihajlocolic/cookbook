@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 import { useState } from "react";
 
 function Home() {
-    const {data:recipes, error, isPending} = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes');
+    const {data:recipes, error, isPending} = UseFetch('http://localhost:8000/recipes/');
     const [searchResults, setSearchResults] = useState([]);
     const {showButton, handleScrollToTop} = ScrollTop();
 

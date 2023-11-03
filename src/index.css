@@ -136,6 +136,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 2rem 10rem;
+  gap: 1rem;
 }
 
 .recipe-details h2, h5 {
@@ -148,17 +149,25 @@ body {
   border-radius: 15px;
 }
 
-.addRecipeForm {
+.recipe-details .buttons {  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.addRecipeForm, .editRecipeForm {
   max-width: 50rem;
   margin: 0 auto;
   padding: 3rem;
   text-align: center;
 }
 
-.addRecipeForm textarea, .addRecipeForm input {
+.addRecipeForm textarea, .addRecipeForm input, .editRecipeForm textarea, .editRecipeForm input {
   width: 100%;
   margin: 1rem 0;
   border: 2px solid #999999;
   border-radius: 5px;
   padding: 0.5rem;
 }
+

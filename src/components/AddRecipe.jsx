@@ -18,7 +18,7 @@ const AddRecipe = () => {
 
         setIsPending(true);
 
-        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes/',{
+        fetch('http://localhost:8000/recipes/',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(dish)

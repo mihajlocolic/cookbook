@@ -4,17 +4,17 @@ import ScrollTop from "./ScrollTop";
 
 const Recipe = () => {
     const {id} = useParams()
-    const { data:recipe, error, isPending } = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes/' + id)
+    const { data:recipe, error, isPending } = UseFetch('http://localhost:8000/recipes/' + id)
     const {showButton, handleScrollToTop} = ScrollTop
     const navigate = useNavigate()
 
     const handleDelete = () => {
-        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes/' + id, {
+        fetch('http://localhost:8000/recipes/' + id, {
             method: 'DELETE'
         })
         .then(response => response.text())
         .then(response => {
-            console.log(response)
+            // console.log(response)
             navigate('/')})
         .catch(() => {
             throw Error("Couldn't delete the recipe.");
@@ -38,7 +38,10 @@ const Recipe = () => {
                         <p>{recipe.preparation}</p>
                         {!recipe.preparation && <p>Recipe preparation to be added.</p>}
                     </div>
-                    <button className="btn btn-primary" onClick={() => handleDelete()}>Delete Recipe</button>
+                    <div className="buttons">
+                        <button className="btn btn-primary" onClick={() => {navigate(`/recipes/${recipe.id}/edit`)}}>Edit Recipe</button>
+                        <button className="btn btn-primary" onClick={() => handleDelete()}>Delete Recipe</button>
+                    </div>
                 </article>
             }
             

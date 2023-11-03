@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Recipe from './components/Recipe';
 import AddRecipe from './components/AddRecipe';
 import NotFound from './components/NotFound';
+import EditRecipe from './components/EditRecipe';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/recipes/:id' element={<Recipe/>}></Route>
         <Route path='/addrecipe' element={<AddRecipe/>}></Route>
+        <Route path='/recipes/:id/edit' element={<EditRecipe/>}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
     </div>
