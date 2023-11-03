@@ -1,20 +1,33 @@
 import { useNavigate, useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import config from '../config';
 
 const EditRecipe = () => {
+
+    const jsonServerUrl = config.developmentServerUrl;
     const {id} = useParams();
-    const { data:recipe, error } = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes' + id);
+    const { data:recipe, error } = UseFetch(jsonServerUrl + '/' + id);
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate();
     
 
-    const [name, setName] = useState('');
+    const [name, setName] = useState();
     const [description, setDescription] = useState('');
     const [ingredients, setIngredients] = useState('');
     const [preparation, setPreparation] = useState('');
     const [image, setImage] = useState('');
 
+
+    useEffect(() => {
+        if (recipe) {
+            setName(recipe.name);
+            setDescription(recipe.description);
+            setIngredients(recipe.ingredients);
+            setPreparation(recipe.preparation);
+            setImage(recipe.image);
+        }
+    }, [recipe]);
 
     const handleEdit = (e) => {
         e.preventDefault();
@@ -22,12 +35,18 @@ const EditRecipe = () => {
 
         const tempRecipe = {name, description, ingredients, preparation, image};
 
-        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes' + id, {
+        fetch(jsonServerUrl + '/' + id, {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(tempRecipe)
         })
-        .then(() => {
+        .then(response => response.json())
+        .then(data => {
+            setName(data.name);
+            setDescription(data.description);
+            setIngredients(data.ingredients);
+            setPreparation(data.preparation);
+            setImage(data.image);
             console.log("Recipe edited.");
             setIsPending(false);
             navigate(`/recipes/${id}`);
@@ -47,32 +66,35 @@ const EditRecipe = () => {
                 <input 
                     name="dishName" 
                     type="text" 
-                    defaultValue={recipe.name}
+                    value={ name }
                     onChange={(e) => setName(e.target.value)}
                     required
                 ></input>
                 <label>Short description:</label>
                 <textarea 
                     name="dishDescription"  
-                    defaultValue={recipe.description}
-                    onChange={(e) => setDescription(e.target.value)}   
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    required   
                 ></textarea>
                 <label>Ingredients:</label>
                 <textarea 
                     name="ingridients" 
-                    defaultValue={recipe.ingredients}
+                    value={ingredients}
                     onChange={(e) => setIngredients(e.target.value)}
+                    required
                 ></textarea>
                 <label>Preparation:</label>
                 <textarea 
                     name="preparation" 
-                    defaultValue={recipe.preparation}
+                    value={preparation}
                     onChange={(e) => setPreparation(e.target.value)}
+                    required
                 ></textarea>
                 <label>Image URL:</label>
                 <input
                 type="text"
-                defaultValue={recipe.image}
+                value={image}
                 onChange={(e) => setImage(e.target.value)}
                 />
                 {! isPending && <button className="btn btn-primary">Save Changes</button>}

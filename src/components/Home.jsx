@@ -3,9 +3,11 @@ import UseFetch from "./UseFetch";
 import ScrollTop from "./ScrollTop";
 import SearchBar from "./SearchBar";
 import { useState } from "react";
+import config from '../config';
 
 function Home() {
-    const {data:recipes, error, isPending} = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes');
+    const jsonServerUrl = config.developmentServerUrl;
+    const {data:recipes, error, isPending} = UseFetch(jsonServerUrl);
     const [searchResults, setSearchResults] = useState([]);
     const {showButton, handleScrollToTop} = ScrollTop();
 

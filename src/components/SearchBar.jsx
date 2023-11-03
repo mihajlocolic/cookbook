@@ -1,12 +1,14 @@
 import { useState } from "react";
+import config from '../config';
 
 const SearchBar = ({setSearchResults}) => {
 
+    const jsonServerUrl = config.developmentServerUrl;
     const [input, setInput] = useState('');
     
     
     const fetchData = (value) => {
-        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes')
+        fetch(jsonServerUrl)
         .then((response) => response.json())
         .then((json) => {
             const results = json.filter((recipe) => {

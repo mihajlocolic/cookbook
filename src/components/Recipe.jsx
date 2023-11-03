@@ -1,15 +1,17 @@
 import { useNavigate, useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
 import ScrollTop from "./ScrollTop";
+import config from '../config';
 
 const Recipe = () => {
+    const jsonServerUrl = config.developmentServerUrl;
     const {id} = useParams()
-    const { data:recipe, error, isPending } = UseFetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes' + id)
+    const { data:recipe, error, isPending } = UseFetch(jsonServerUrl + '/' + id)
     const {showButton, handleScrollToTop} = ScrollTop
     const navigate = useNavigate()
 
     const handleDelete = () => {
-        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes' + id, {
+        fetch(jsonServerUrl + '/' + id, {
             method: 'DELETE'
         })
         .then(response => response.text())

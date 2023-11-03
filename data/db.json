@@ -1,7 +1,6 @@
 {
   "recipes": [
     {
-      "id": 1,
       "name": "Spaghetti Carbonara",
       "description": "A classic Italian pasta dish with creamy sauce and crispy pancetta.",
       "ingredients": [
@@ -14,7 +13,8 @@
         "Fresh parsley for garnish"
       ],
       "preparation": "1. Cook the spaghetti according to package instructions until al dente. Reserve 1/2 cup of pasta cooking water.\n2. In a separate pan, sauté the pancetta until it's crispy. Add minced garlic and cook for another minute.\n3. In a bowl, whisk together eggs, grated Pecorino Romano cheese, and a bit of black pepper.\n4. Drain the cooked spaghetti and add it to the pan with pancetta and garlic. Toss to combine.\n5. Remove from heat and quickly stir in the egg and cheese mixture. Use reserved pasta water to achieve a creamy consistency.\n6. Serve with additional grated cheese and chopped fresh parsley.",
-      "image": "https://www.culinaryhill.com/wp-content/uploads/2021/12/Spaghetti-Carbonara-Culinary-Hill-1200x800-1-480x270.jpg"
+      "image": "https://www.culinaryhill.com/wp-content/uploads/2021/12/Spaghetti-Carbonara-Culinary-Hill-1200x800-1-480x270.jpg",
+      "id": 1
     },
     {
       "id": 2,
@@ -48,20 +48,12 @@
       "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Caprese-Salad-main-1.jpg"
     },
     {
-      "id": 4,
       "name": "Beef Stir-Fry",
       "description": "A quick and flavorful stir-fry with tender beef and crisp vegetables.",
-      "ingredients": [
-        "1 pound beef sirloin, thinly sliced",
-        "2 cups mixed vegetables (e.g., broccoli, bell peppers, snap peas)",
-        "3 cloves garlic, minced",
-        "1/4 cup soy sauce",
-        "2 tablespoons hoisin sauce",
-        "2 tablespoons vegetable oil",
-        "Cooked rice for serving"
-      ],
+      "ingredients": "1 pound beef sirloin, thinly sliced,2 cups mixed vegetables (e.g., broccoli, bell peppers, snap peas),3 cloves garlic, minced,1/4 cup soy sauce,2 tablespoons hoisin sauce,2 tablespoons vegetable oil,Cooked rice for serving.",
       "preparation": "1. In a bowl, marinate the sliced beef with minced garlic, soy sauce, and hoisin sauce for 15 minutes.\n2. Heat vegetable oil in a wok or large skillet over high heat.\n3. Add the marinated beef and stir-fry until it's browned and cooked through. Remove from the pan and set aside.\n4. In the same pan, stir-fry the mixed vegetables until crisp-tender.\n5. Return the cooked beef to the pan and stir to combine with the vegetables.\n6. Serve the beef stir-fry over cooked rice.",
-      "image": "https://www.foodnetwork.com/content/dam/images/food/fullset/2015/12/16/3/FNM_010116-Beef-Stir-Fry-Recipe_s4x3.jpg"
+      "image": "https://www.foodnetwork.com/content/dam/images/food/fullset/2015/12/16/3/FNM_010116-Beef-Stir-Fry-Recipe_s4x3.jpg",
+      "id": 4
     }
   ]
 }

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ScrollTop from "./ScrollTop";
+import config from '../config';
 
 const AddRecipe = () => {
+    const jsonServerUrl = config.developmentServerUrl;
+
     const [name, setDishName] = useState('');
     const [description, setDishDescription] = useState('');
     const [ingredients, setIngredients] = useState('');
@@ -18,11 +21,13 @@ const AddRecipe = () => {
 
         setIsPending(true);
 
-        fetch('https://my-json-server.typicode.com/mihajlocolic/cookbook-json/recipes',{
+        fetch(jsonServerUrl, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(dish)
-        }).then(() => {
+        })
+        .then(response => response.json())
+        .then(() => {
             console.log("New dish added");
             setIsPending(false);
             navigate('/')
