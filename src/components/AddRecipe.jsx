@@ -4,7 +4,7 @@ import ScrollTop from "./ScrollTop";
 import config from '../config';
 
 const AddRecipe = () => {
-    const jsonServerUrl = config.developmentServerUrl;
+    const jsonServerUrl = config.productionServerUrl;
 
     const [name, setDishName] = useState('');
     const [description, setDishDescription] = useState('');

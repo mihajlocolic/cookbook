@@ -4,7 +4,7 @@ import ScrollTop from "./ScrollTop";
 import config from '../config';
 
 const Recipe = () => {
-    const jsonServerUrl = config.developmentServerUrl;
+    const jsonServerUrl = config.productionServerUrl;
     const {id} = useParams()
     const { data:recipe, error, isPending } = UseFetch(jsonServerUrl + '/' + id)
     const {showButton, handleScrollToTop} = ScrollTop

@@ -3,7 +3,7 @@ import config from '../config';
 
 const SearchBar = ({setSearchResults}) => {
 
-    const jsonServerUrl = config.developmentServerUrl;
+    const jsonServerUrl = config.productionServerUrl;
     const [input, setInput] = useState('');
     
     

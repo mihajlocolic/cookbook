@@ -6,7 +6,7 @@ import { useState } from "react";
 import config from '../config';
 
 function Home() {
-    const jsonServerUrl = config.developmentServerUrl;
+    const jsonServerUrl = config.productionServerUrl;
     const {data:recipes, error, isPending} = UseFetch(jsonServerUrl);
     const [searchResults, setSearchResults] = useState([]);
     const {showButton, handleScrollToTop} = ScrollTop();

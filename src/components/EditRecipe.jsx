@@ -5,7 +5,7 @@ import config from '../config';
 
 const EditRecipe = () => {
 
-    const jsonServerUrl = config.developmentServerUrl;
+    const jsonServerUrl = config.productionServerUrl;
     const {id} = useParams();
     const { data:recipe, error } = UseFetch(jsonServerUrl + '/' + id);
     const [isPending, setIsPending] = useState(false);
