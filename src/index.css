@@ -55,14 +55,11 @@ body {
   margin: 1rem 2rem;
   color: #34932b;
 }
-.error-message, .loading-message {
+.loading-message {
   text-align: center;
   font-size: 2em;
 }
-.error-message {
-  background-color: rgb(255, 72, 72);
-  outline: 2px solid rgb(195, 42, 42);
-}
+
 
 .search-bar {
   display: flex;
@@ -171,6 +168,18 @@ body {
   padding: 0.5rem;
 }
 
+.notifications {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 1rem;
+
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  
+}
+
 .notification {
   border: none;
   border-radius: 20px;
@@ -187,14 +196,12 @@ body {
   align-items: center;
   gap: 10px;
 
-  position: absolute;
-  top: 60px;
-  right: 30px;
+  
 }
 
 
 @media screen and (max-width: 900px) {
-  .notification {
+  .notifications {
     position: static;
   }
   
