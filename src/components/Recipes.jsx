@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 const Recipes = ({recipes}) => {
+    const results = recipes;
 
     return (
         <div className="recipe-list">
-            { recipes && recipes.toReversed().map(recipe => (
+            { Array.isArray(results) && results.toReversed().map(recipe => (
                 <div className="card" style={{width: 25 + 'rem'}} key={recipe.id}>
                     <Link to={`/recipes/${recipe.id}`}>
                     <img src={recipe.image} className="card-img-top" alt="..."/>

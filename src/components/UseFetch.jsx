@@ -9,15 +9,15 @@ const UseFetch = (url) => {
     
         useEffect(() => {
             setTimeout(() => {
-                fetch(url)
+                fetch(url, {
+                })
                 .then(response => {
                     if (!response.ok) {
                         throw Error("Couldn't fetch the data from that url.")
                     }
-                    
                     return response.json()
                 }).then((data) => {
-                    // console.log(data)
+                    console.log(data)
                     setData(data)
                     setError(null)
                     setIsPending(false)
@@ -31,8 +31,7 @@ const UseFetch = (url) => {
     
     
 
-    return {data, error, isPending}
-    
+    return {data, error, isPending};
 }
  
 export default UseFetch;

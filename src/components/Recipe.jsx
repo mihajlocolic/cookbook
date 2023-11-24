@@ -4,12 +4,13 @@ import ScrollTop from "./ScrollTop";
 import config from '../config';
 
 const Recipe = () => {
-    const jsonServerUrl = config.productionServerUrl;
-    const {id} = useParams()
-    const { data:recipe, error, isPending } = UseFetch(jsonServerUrl + '/' + id)
-    const {showButton, handleScrollToTop} = ScrollTop
-    const navigate = useNavigate()
+    const {id} = useParams();
+    const jsonServerUrl = config.productionServerUrl + '/' + id;
+    const { data:recipe, error, isPending } = UseFetch(jsonServerUrl);
+    const {showButton, handleScrollToTop} = ScrollTop;
+    const navigate = useNavigate();
 
+   
     const handleDelete = () => {
         fetch(jsonServerUrl + '/' + id, {
             method: 'DELETE'
