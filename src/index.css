@@ -171,3 +171,31 @@ body {
   padding: 0.5rem;
 }
 
+.notification {
+  border: none;
+  border-radius: 20px;
+  background-color: #092904;
+  color: white;
+
+  padding: 15px;
+  width: 300px;
+  margin: 1rem 2rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  position: absolute;
+  top: 60px;
+  right: 30px;
+}
+
+
+@media screen and (max-width: 900px) {
+  .notification {
+    position: static;
+  }
+  
+}

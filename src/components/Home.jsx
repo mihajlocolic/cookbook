@@ -11,9 +11,17 @@ function Home() {
     const [searchResults, setSearchResults] = useState([]);
     const {showButton, handleScrollToTop} = ScrollTop();
 
+    const deleteNotification = () => {
+        document.getElementById('tmp-notification').parentElement.style.display = 'none';
+    }
+
     return(
         <div className="home">
             <SearchBar setSearchResults={setSearchResults}/>
+            <div className="notification">
+                <p>Creating and updating operations aren't supported on current API.</p>
+                <button id='tmp-notification' className="btn btn-primary" onClick={deleteNotification}>Dismiss</button>
+            </div>
             { error && <div className="error-message">{error}</div> }
             { isPending && <div className="loading-message">Loading delicious recipes...</div> }
             { searchResults.length > 0 ?
